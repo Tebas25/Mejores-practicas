@@ -11,6 +11,9 @@ Los requisitos son los siguientes:
 - El equipo de negocio ha solicitado agregar el año actual, y 20 propiedades más por defecto que se solicitarán en el siguiente sprint. Estas propiedades afectan a vehículo. Implementa un patrón de diseño para agregar propiedades por defecto, y como lo diseñarías para minimizar los cambios para el siguiente sprint.
 
 - Se planea agregar un nuevo modelo. El Arquitecto de Software prevee que la unidad de negocio, planeará la introducción de más modelos por lo cual sugiere la implementación de un Factory Method.
+
   - Color: Red
   - Marca: Ford
   - Modelo: Escape
+
+- Un nuevo equipo de full-stack developers estan migrando el core, a un modern web application como nextjs. Aplica los mismos conocimientos adquiridos para poder arreglar el boton de agregar vehiculo.
