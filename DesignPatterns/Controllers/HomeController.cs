@@ -1,4 +1,6 @@
-﻿using DesignPatterns.Models;
+﻿using DesignPatterns.Infraestructure.Factory;
+using DesignPatterns.ModelBuilder;
+using DesignPatterns.Models;
 using DesignPatterns.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -15,6 +17,21 @@ namespace DesignPatterns.Controllers
         private readonly ILogger<HomeController> _logger;
 
         private readonly IVehicleRepository _vehicleRepository;
+
+        private CarFactory selectFactory(string model)
+        {
+            switch (model.ToLower())
+            {
+                case "mustang":
+                    return new FordMustangFactory();
+                case "explorer":
+                    return new FordExplorerFactory();
+                case "escape":
+                    return new FordEscapeFactory();
+                default:
+                    throw new NotImplementedException();
+            }
+        }
 
         public HomeController(IVehicleRepository vehicleRepository,ILogger<HomeController> logger)
         {
@@ -35,14 +52,21 @@ namespace DesignPatterns.Controllers
         [HttpGet]
         public IActionResult AddMustang()
         {
-            _vehicleRepository.AddVehicle(new Car("red","Ford","Mustang"));
+            _vehicleRepository.AddVehicle(selectFactory("mustang").Create());
             return Redirect("/");
         }
 
         [HttpGet]
         public IActionResult AddExplorer()
         {
-            _vehicleRepository.AddVehicle(new Car("red", "Ford", "Explorer"));
+            _vehicleRepository.AddVehicle(selectFactory("explorer").Create());
+            return Redirect("/");
+        }
+
+        [HttpGet]
+        public IActionResult AddEscape()
+        {
+            _vehicleRepository.AddVehicle(selectFactory("escape").Create());
             return Redirect("/");
         }
 

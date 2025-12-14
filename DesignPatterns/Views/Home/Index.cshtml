@@ -17,6 +17,7 @@
         <th>Marca</th>
         <th>Modelo</th>
         <th>Color</th>
+        <th>Año</th>
         <th>Gallons</th>
         <th>Status</th>
         <th>Actions</th>
@@ -38,6 +39,16 @@
         </td>
         <td>
             @vehicle.Color
+        </td>
+        <td>
+            @if (vehicle is Car car) 
+            {
+                @car.Year
+            }
+            else 
+            {
+                <span>-</span>
+            }
         </td>
         <td>
             @vehicle.Gas.ToString("N1")
@@ -63,4 +74,5 @@
 
     <a href="/Home/AddMustang">Add Mustang</a>
     <a href="/Home/AddExplorer">Add Explorer</a>
+    <a href="/Home/AddEscape">Add Escape</a>
 </div>
