@@ -3,7 +3,6 @@
 ![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen)
 ![Platform](https://img.shields.io/badge/.NET-Core-blueviolet)
 ![Language](https://img.shields.io/badge/C%23-10.0-blue)
-![License](https://img.shields.io/badge/License-MIT-yellow)
 
 > Una refactorización técnica aplicando principios SOLID y Patrones de Diseño (GoF) para resolver problemas de escalabilidad y deuda técnica en un sistema de gestión vehicular.
 
