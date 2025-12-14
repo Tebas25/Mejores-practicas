@@ -1,4 +1,4 @@
-# 🚗 Best Practices & Design Patterns Workshop
+# Best Practices & Design Patterns Workshop
 
 ![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen)
 ![Platform](https://img.shields.io/badge/.NET-Core-blueviolet)
@@ -20,7 +20,7 @@ El proyecto simula un entorno empresarial real ("Codificando Con Patrones Cía. 
 
 ---
 
-## 🏗 Arquitectura y Patrones
+## Arquitectura y Patrones
 
 Para solucionar los problemas identificados, se implementaron los siguientes patrones de diseño creacionales:
 
@@ -38,7 +38,7 @@ Para solucionar los problemas identificados, se implementaron los siguientes pat
 
 ---
 
-## 🚀 Demo de la Aplicación
+## Demo de la Aplicación
 
 ![Captura de Pantalla .NET](./images/Captura1.png)
 ![Captura de Pantalla NextJs](./images/Captura2.png)
